@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil du Joueur</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #e5f7e5, #ffffff);
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: #2c3e50;
+      }
+      .photo {
+        max-width: 150px;
+        border-radius: 8px;
+        border: 3px solid #27ae60;
+      }
+      .player-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .player-info div {
+        flex: 1;
+        min-width: 220px;
+        margin-bottom: 15px;
+        padding: 10px;
+        background: #ffffff;
+        border-radius: 8px;
+        border: 1px solid #27ae60;
+      }
+      .player-info label {
+        font-weight: bold;
+        color: #27ae60;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .player-info span,
+      .player-info p {
+        display: block;
+        color: #333;
+      }
+      .positions span,
+      .nationality span,
+      .strong-feet span,
+      .weak-feet span,
+      .club span {
+        display: block;
+        color: #2c3e50;
+      }
+      .observations {
+        margin-top: 20px;
+        padding: 20px;
+        border-top: 2px solid #27ae60;
+        background: #ffffff;
+        border-radius: 8px;
+      }
+      .observations label {
+        font-weight: bold;
+        color: #27ae60;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .observations p {
+        margin: 0;
+        color: #333;
+      }
+      .icon {
+        font-size: 1.5rem;
+        color: #27ae60;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1><i class="fas fa-user"></i> Profil du Joueur</h1>
+        <img
+          src="{{ player.photo.url }}"
+          alt="Photo de {{ player.name }}"
+          class="photo"
+        />
+      </div>
+      <div class="player-info">
+        <div class="name">
+          <label><i class="fas fa-id-badge icon"></i> Nom:</label>
+          <span>{{ player.name }}</span>
+        </div>
+        <div class="birthdate">
+          <label
+            ><i class="fas fa-calendar-alt icon"></i> Date de Naissance:</label
+          >
+          <span>{{ player.birthdate }}</span>
+        </div>
+        <div class="positions">
+          <label><i class="fas fa-positions icon"></i> Postes:</label>
+          {% for position in player.positions.all %}
+          <span>{{ position.name }}</span>
+          {% empty %}
+          <span>Aucun poste attribué</span>
+          {% endfor %}
+        </div>
+        <div class="nationality">
+          <label><i class="fas fa-flag icon"></i> Nationalité:</label>
+          <span>{{ player.nationality.name }}</span>
+        </div>
+        <div class="strong-feet">
+          <label><i class="fas fa-shoe-prints icon"></i> Pied Fort:</label>
+          <span>{{ player.get_strong_feet_display }}</span>
+        </div>
+        <div class="weak-feet">
+          <label><i class="fas fa-shoe-prints icon"></i> Pied Faible:</label>
+          <span>{{ player.get_weak_feet_display }}</span>
+        </div>
+        <div class="strengths">
+          <label><i class="fas fa-star icon"></i> Points Forts:</label>
+          <span>{{ player.strengths }}</span>
+        </div>
+        <div class="weaknesses">
+          <label
+            ><i class="fas fa-star-half-alt icon"></i> Points Faibles:</label
+          >
+          <span>{{ player.weaknesses }}</span>
+        </div>
+        <div class="club">
+          <label><i class="fas fa-soccer-ball icon"></i> Club:</label>
+          <span>{{ player.club.name }}</span>
+        </div>
+      </div>
+      <div class="observations">
+        <label><i class="fas fa-comments icon"></i> Observation:</label>
+        <p>{{ player.observations }}</p>
+      </div>
+    </div>
+  </body>
+</html>
