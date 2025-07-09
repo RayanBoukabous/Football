@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: django-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn football_software.wsgi:application"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: ALLOWED_HOSTS
+        value: app-djalil.onrender.com
+      - key: ENV
+        value: prod
+      - key: PROD_API_URL
+        value: https://app-djalil.onrender.com
