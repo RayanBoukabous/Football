@@ -26,7 +26,8 @@ urlpatterns = [
     re_path(r"^matches/", include("matches.urls")),
     re_path(r"^individualitys/", include("individualitys.urls")),
     re_path(r"^players/", include("players.urls")),
-    path("", include("accounts.urls")),  # si tu veux que login soit à /
+    path("", include("accounts.urls")),
+    path("matches/", include("matches.urls")),
 ]
 
 if settings.DEBUG:

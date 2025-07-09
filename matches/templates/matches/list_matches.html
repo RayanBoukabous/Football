@@ -1,0 +1,421 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion des Matchs</title>
+
+    <!-- ✅ Bootstrap pour responsivité -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- à placer dans <head> ou avant la balise de ton script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="{% static 'matches/assets/css/main/app.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'matches/assets/css/main/app-dark.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'matches/assets/css/shared/iconly.css' %}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'matches/assets/images/logo/favicon.svg' %}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'matches/assets/images/logo/favicon.png' %}"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <style>
+      /* (tout ton CSS reste inchangé ici, je n’y ai rien touché) */
+      .navbar {
+        padding-top: 0.3rem !important;
+        padding-bottom: 0.3rem !important;
+      }
+      .navbar-brand img {
+        height: 36px !important;
+        max-height: 36px;
+      }
+      .navbar-nav .nav-link {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.7rem;
+      }
+      .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      #spinnerOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .spinner-border {
+        width: 3rem;
+        height: 3rem;
+        border-width: 0.4rem;
+      }
+
+      .flag-container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 8px;
+      }
+      .flag {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .team-name {
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      tr {
+        transition: background-color 0.2s;
+        height: 50px;
+        cursor: pointer;
+      }
+      tr:hover {
+        background-color: #e0f7ec !important;
+      }
+
+      .filters {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .filters .form-control {
+        min-width: 140px;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+      }
+      .filters .btn {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      .pagination button {
+        margin: 0 4px;
+        padding: 4px 8px;
+        border: 1px solid #198754;
+        background: white;
+        color: #198754;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.85rem;
+      }
+      .pagination button.active {
+        background: #198754;
+        color: white;
+      }
+
+      #noDataMsg {
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.1rem;
+        color: #555;
+      }
+      #sidebar {
+        transition: all 0.3s ease;
+      }
+      #sidebar:not(.active) {
+        margin-left: -280px;
+      }
+      .footer {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #f8f9fa;
+        color: #333;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.95rem;
+        border-top: 1px solid #ddd;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="{% static 'matches/assets/js/initTheme.js' %}"></script>
+
+    <div id="spinnerOverlay">
+      <div class="spinner-border text-success" role="status"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img
+            src="{% static 'matches/assets/images/logo/logo.jpg' %}"
+            alt="Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <i class="bi bi-list text-success"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="app">
+      <div id="sidebar" class="active">
+        <div class="sidebar-wrapper active">
+          <div class="d-block align-items-center text-center">
+            <a>
+              <img
+                src="{% static 'accounts/assets/images/logo/logo.jpg' %}"
+                alt="Logo"
+                width="280"
+                height="150"
+              />
+            </a>
+            <h4>Djalil's app</h4>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title" style="color: green">Menu</li>
+              <li class="sidebar-item active">
+                <a href="{% url 'list_matches' %}" class="sidebar-link"
+                  ><i class="bi bi-card-list"></i><span>Matches</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link"
+                  ><i class="bi bi-list"></i><span>Individualité</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link"
+                  ><i class="bi bi-bar-chart-line"></i
+                  ><span>Analyse Match</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link"
+                  ><i class="bi bi-list-columns-reverse"></i
+                  ><span>Entrainement</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="main">
+        <div>
+          <div>
+            <h3 class="fw-bold" style="color: #198754">Liste des Matches</h3>
+          </div>
+
+          <div class="page-content">
+            <section class="row">
+              <div class="col-12">
+                <div
+                  class="card shadow-sm border-0"
+                  style="border-top: 4px solid #dc3545"
+                >
+                  <div class="card-body">
+                    <div class="filters">
+                      <input
+                        type="text"
+                        id="searchEquipe"
+                        class="form-control"
+                        placeholder="Recherche équipe..."
+                      />
+                      <input type="date" id="dateFilter" class="form-control" />
+                      <button
+                        class="btn btn-outline-danger btn-sm"
+                        id="resetFilters"
+                      >
+                        Réinit
+                      </button>
+                    </div>
+                    <div class="table-responsive position-relative">
+                      <table
+                        class="table table-hover mb-0 align-middle"
+                        id="table"
+                      >
+                        <thead style="background-color: #198754; color: white">
+                          <tr>
+                            <th>Equipe 1</th>
+                            <th class="text-center">Score</th>
+                            <th class="text-end">Equipe 2</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                      <div id="noDataMsg" style="display: none">
+                        Aucun match trouvé 🤷‍♂️
+                      </div>
+                    </div>
+                    <div class="pagination" id="pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <footer class="footer">
+            <p>&copy; 2025 Tous droits réservés.</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <div id="api-config" data-api-url="{{ api_url }}"></div>
+
+    <script src="{% static 'matches/assets/js/bootstrap.js' %}"></script>
+    <script src="{% static 'matches/assets/js/app.js' %}"></script>
+    <script>
+      let allMatches = [],
+        currentPage = 1,
+        matchesPerPage = 10;
+
+      function showSpinner(show) {
+        $("#spinnerOverlay").toggle(show);
+      }
+      function showToast(msg, bg = "danger") {
+        Toastify({
+          text: msg,
+          duration: 3000,
+          gravity: "top",
+          position: "right",
+          backgroundColor: bg,
+        }).showToast();
+      }
+
+      const apiUrl = $("#api-config").data("apiUrl");
+
+      function get_match_details(id) {
+        window.location.href = `${apiUrl}/matches/match/${id}/`;
+      }
+
+      function tableRow(m) {
+        const d = new Date(m.match_date).toISOString().split("T")[0];
+        return `
+          <tr onclick="get_match_details(${m.id})">
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="flag-container"><img src="${m.first.flag}" class="flag" alt="Drapeau équipe 1"/></div>
+                <span class="team-name">${m.first.name}</span>
+              </div>
+            </td>
+            <td class="text-center">${m.finale_result}<br><small>${d}</small></td>
+            <td class="text-end">
+              <div class="d-flex align-items-center justify-content-end">
+                <span class="team-name">${m.second.name}</span>
+                <div class="flag-container ms-2"><img src="${m.second.flag}" class="flag" alt="Drapeau équipe 2"/></div>
+              </div>
+            </td>
+          </tr>`;
+      }
+
+      function paginate(arr, p) {
+        return arr.slice((p - 1) * matchesPerPage, p * matchesPerPage);
+      }
+
+      function renderPagination(total) {
+        const pages = Math.ceil(total / matchesPerPage);
+        let html = "";
+        for (let i = 1; i <= pages; i++) {
+          html += `<button class="${
+            i === currentPage ? "active" : ""
+          }" onclick="goPage(${i})">${i}</button>`;
+        }
+        $("#pagination").html(html);
+      }
+
+      function renderTable(data) {
+        const pagData = paginate(data, currentPage);
+        $("#table tbody").html(pagData.map(tableRow).join(""));
+        $("#noDataMsg").toggle(data.length === 0);
+        renderPagination(data.length);
+      }
+
+      function filterMatches() {
+        const q = $("#searchEquipe").val().toLowerCase();
+        const sd = $("#dateFilter").val();
+        const filtered = allMatches.filter((m) => {
+          const names = (m.first.name + m.second.name).toLowerCase();
+          return (
+            names.includes(q) && (!sd || m.match_date.split("T")[0] === sd)
+          );
+        });
+        currentPage = 1;
+        renderTable(filtered);
+      }
+
+      function goPage(p) {
+        currentPage = p;
+        filterMatches();
+      }
+
+      function fetchData() {
+        showSpinner(true);
+        fetch(`${apiUrl}/matches/api/matches/`)
+          .then((res) => {
+            if (!res.ok) throw new Error("Erreur serveur");
+            return res.json();
+          })
+          .then((d) => {
+            allMatches = d;
+            filterMatches();
+          })
+          .catch((e) => {
+            console.error(e);
+            showToast("Erreur réseau");
+          })
+          .finally(() => showSpinner(false));
+      }
+
+      $(function () {
+        fetchData();
+        $("#searchEquipe,#dateFilter").on("input change", filterMatches);
+        $("#resetFilters").click(() => {
+          $("#searchEquipe,#dateFilter").val("");
+          currentPage = 1;
+          filterMatches();
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggler = document.querySelector(".navbar-toggler");
+        const sidebar = document.querySelector("#sidebar");
+
+        toggler.addEventListener("click", function () {
+          sidebar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

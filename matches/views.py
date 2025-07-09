@@ -29,3 +29,27 @@ class MatchDetails(APIView):
         serializer = MatchSerializer(match)
         return Response(serializer.data)
         # return Response(status=200)
+
+
+from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+
+from django.conf import settings
+
+
+@login_required
+def list_matches(request):
+    return render(request, "matches/list_matches.html", {"api_url": settings.API_URL})
+
+
+from django.shortcuts import render, get_object_or_404
+from .models import Match
+
+
+from django.shortcuts import render, get_object_or_404
+from .models import Match
+
+
+def match_details(request, match_id):
+    match = get_object_or_404(Match, id=match_id)
+    return render(request, "matches/match_details.html", {"match": match})

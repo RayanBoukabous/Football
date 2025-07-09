@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion - Gestion des Matchs</title>
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'accounts/assets/css/main/app.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'accounts/assets/css/main/app-dark.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'accounts/assets/css/shared/iconly.css' %}"
+    />
+
+    <!-- Toastify -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <style>
+      body {
+        background-color: #f4f6f9;
+      }
+
+      .login-wrapper {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Le bouton reste vert même désactivé */
+      .btn-login:disabled {
+        background-color: #198754 !important;
+        color: white;
+        opacity: 1;
+      }
+
+      /* On force aussi les bulles à rester visibles */
+      .btn-login:disabled .dot {
+        background-color: white;
+      }
+
+      .login-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 2rem;
+        border-top: 4px solid #198754;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .login-card img {
+        display: block;
+        margin: 0 auto 1rem;
+        width: 150px;
+      }
+
+      .form-control:focus {
+        box-shadow: none;
+        border-color: #198754;
+      }
+
+      .btn-login {
+        background-color: #198754;
+        color: white;
+        position: relative;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .btn-login:hover {
+        background-color: #157347;
+      }
+
+      .dots-loader {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+        animation: bounce 0.6s infinite alternate;
+      }
+
+      .dot:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      .dot:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-8px);
+        }
+      }
+
+      .quote {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: #555;
+        text-align: center;
+        min-height: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-wrapper">
+      <div class="login-card">
+        <img
+          src="{% static 'accounts/assets/images/logo/logo.jpg' %}"
+          alt="Logo"
+        />
+
+        <h4 class="text-center mb-4" style="color: #198754">Connexion</h4>
+
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">Nom d'utilisateur</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn btn-login w-100" id="loginButton">
+            <span class="btn-text">Se connecter</span>
+          </button>
+        </form>
+
+        <div class="quote" id="quoteDisplay"></div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script>
+      const form = document.getElementById("loginForm");
+      const loginButton = document.getElementById("loginButton");
+      const btnText = loginButton.querySelector(".btn-text");
+
+      const quotes = [
+        "Le football se joue avec la tête. Les pieds ne sont que des outils. – Andrea Pirlo",
+        "Le talent gagne des matchs, mais le travail d'équipe et l'intelligence gagnent des championnats. – Michael Jordan",
+        "Il n’y a pas de secret : travail, travail, travail. – Cristiano Ronaldo",
+        "Jouer au football, c’est très simple, mais jouer un football simple est la chose la plus difficile qui soit. – Johan Cruyff",
+        "Les grands joueurs ne sont pas ceux qui marquent tous les buts, mais ceux qui font briller les autres. – Zinédine Zidane",
+        "Ta plus grande force, c’est ta mentalité. – Kylian Mbappé",
+        "Ce n’est pas la taille du joueur dans le match, c’est la taille du match dans le joueur. – Lionel Messi",
+        "Quand tu doutes, passe le ballon. – Arsène Wenger",
+        "Le football, c’est la vie. – Pelé",
+        "La passion bat toujours le talent quand le talent ne travaille pas. – Gary Player",
+        "Sois humble dans la victoire et fort dans la défaite. – Didier Drogba",
+        "Ce que tu fais à l'entraînement, tu le répètes en match. – Paolo Maldini",
+        "Ne joue pas pour les projecteurs, joue pour ton équipe.",
+        "Chaque match est une opportunité d’être meilleur que la veille.",
+        "L’échec n’est qu’une étape vers la victoire.",
+        "Le terrain ne ment jamais.",
+        "Ne rêve pas ta carrière, entraîne-toi pour la vivre.",
+        "Garde les pieds sur terre, mais le regard vers les buts.",
+        "Le respect commence par l’effort.",
+        "Tu ne perds jamais : soit tu gagnes, soit tu apprends.",
+        "Une équipe unie peut vaincre n’importe quelle difficulté.",
+        "Ceux qui abandonnent ne sauront jamais s’ils auraient pu réussir.",
+        "Le succès appartient à ceux qui ne comptent pas les heures.",
+        "Chaque goutte de sueur construit ta légende.",
+        "Le maillot que tu portes représente plus que toi.",
+        "La discipline bat toujours la motivation.",
+        "Sois ton propre rival.",
+        "Joue chaque match comme si c’était le dernier.",
+        "Le silence des critiques est ta plus belle réponse.",
+        "N'attends pas le bon moment. Crée-le sur le terrain.",
+      ];
+
+      // Affiche une citation aléatoire
+      function showRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quoteDisplay").innerText = quotes[randomIndex];
+      }
+
+      window.onload = showRandomQuote;
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Affiche les 3 points animés
+        btnText.innerHTML = `
+                <div class="dots-loader">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+              `;
+        loginButton.disabled = true;
+
+        const apiUrl = "{{ api_url }}";
+        console.log("API URL:", apiUrl);
+
+        fetch(`${apiUrl}/login/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": getCookie("csrftoken"),
+          },
+          body: JSON.stringify({ username, password }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.success) {
+              window.location.href = data.redirect;
+            } else {
+              Toastify({
+                text: data.error || "Erreur lors de la connexion",
+                duration: 3000,
+                gravity: "top",
+                position: "right",
+                backgroundColor: "#dc3545",
+              }).showToast();
+            }
+          })
+          .catch((error) => {
+            console.error("Erreur dans le fetch:", error);
+            Toastify({
+              text: "Erreur serveur",
+              duration: 3000,
+              gravity: "top",
+              position: "right",
+              backgroundColor: "#dc3545",
+            }).showToast();
+          });
+      });
+
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(
+                cookie.substring(name.length + 1)
+              );
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+    </script>
+  </body>
+</html>

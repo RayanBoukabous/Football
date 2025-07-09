@@ -13,8 +13,20 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 
+from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+from decouple import config
+
+ENV = config("ENV", default="dev")
+
+if ENV == "prod":
+    API_URL = config("PROD_API_URL")
+else:
+    API_URL = config("DEV_API_URL")
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +38,7 @@ SECRET_KEY = "django-insecure-gc=o@fgpskr#dn)^kmwk)xvtzbm^*z-lcv@rf*cldvz+i+m(v=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["djalil_app.onrender.com", "localhost", "127.0.0.1"]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -72,7 +84,7 @@ ROOT_URLCONF = "football_software.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "front_end", "mainTemplate")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -135,7 +147,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+
+# Pour collecter les fichiers en prod :
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "front_end", "static"),  # ← si tu as un dossier global
+    # Ou rien du tout si tu mets tout dans les apps
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -156,10 +177,12 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
-import os
-
-DEBUG = os.environ.get("DEBUG", "False") == "True"
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", SECRET_KEY)
 # ALLOWED_HOSTS = [".onrender.com"]
+# At the end of settings.py
+if not DEBUG:
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # ← pour Render

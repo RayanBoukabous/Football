@@ -1,0 +1,400 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion des Matchs</title>
+
+    <link
+      rel="stylesheet"
+      href="{% static 'matches/assets/css/main/app.css' %}"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <style>
+      .navbar {
+        padding-top: 0.3rem !important;
+        padding-bottom: 0.3rem !important;
+      }
+      .navbar-brand img {
+        height: 36px !important;
+        max-height: 36px;
+      }
+      .navbar-nav .nav-link {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.7rem;
+      }
+      .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      /* Loader overlay */
+      #spinnerOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .spinner-border {
+        width: 3rem;
+        height: 3rem;
+        border-width: 0.4rem;
+      }
+
+      /* Flags & table */
+      .flag-container {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 8px;
+      }
+      .flag {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+      .team-name {
+        font-weight: 500;
+        font-size: 0.9rem;
+      }
+      tr {
+        transition: background-color 0.2s;
+        height: 50px;
+        cursor: pointer;
+      }
+      tr:hover {
+        background-color: #e0f7ec !important;
+      }
+
+      /* Filters and pagination */
+      .filters {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+      .filters .form-control {
+        min-width: 140px;
+        padding: 4px 8px;
+        font-size: 0.9rem;
+      }
+      .filters .btn {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+      .pagination button {
+        margin: 0 4px;
+        padding: 4px 8px;
+        border: 1px solid #198754;
+        background: white;
+        color: #198754;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.85rem;
+      }
+      .pagination button.active {
+        background: #198754;
+        color: white;
+      }
+
+      /* No-data message */
+      #noDataMsg {
+        text-align: center;
+        padding: 2rem;
+        font-size: 1.1rem;
+        color: #555;
+      }
+      /* Sidebar cachée par défaut */
+      #sidebar {
+        transition: all 0.3s ease;
+        margin-left: -280px;
+      }
+
+      /* Quand active, elle revient */
+      #sidebar.active {
+        margin-left: 0;
+      }
+
+      /* Si écran >= 992px (tablette / laptop), on l'affiche toujours */
+      @media (min-width: 992px) {
+        #sidebar {
+          margin-left: 0 !important;
+        }
+      }
+      .footer {
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #f8f9fa;
+        color: #333;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 0.95rem;
+        border-top: 1px solid #ddd;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="spinnerOverlay">
+      <div class="spinner-border text-success" role="status"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          <img
+            src="{% static 'matches/assets/images/logo/logo.jpg' %}"
+            alt="Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <i class="bi bi-list text-success"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div id="app">
+      <div id="sidebar">
+        <div class="sidebar-wrapper active">
+          <div class="d-block align-items-center text-center">
+            <a>
+              <img
+                src="{% static 'accounts/assets/images/logo/logo.jpg' %}"
+                alt="Logo"
+                width="280"
+                height="150"
+              />
+            </a>
+            <h4>Djalil's app</h4>
+          </div>
+          <div class="sidebar-menu">
+            <ul class="menu">
+              <li class="sidebar-title" style="color: green">Menu</li>
+              <li class="sidebar-item active">
+                <a href="{% url 'list_matches' %}" class="sidebar-link"
+                  ><i class="bi bi-card-list"></i><span>Matches</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link"
+                  ><i class="bi bi-list"></i><span>Individualité</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link"
+                  ><i class="bi bi-bar-chart-line"></i
+                  ><span>Analyse Match</span></a
+                >
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link"
+                  ><i class="bi bi-list-columns-reverse"></i
+                  ><span>Entrainement</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <div>
+          <h3 class="fw-bold" style="color: #198754">Détails du match</h3>
+        </div>
+
+        <div class="page-content">
+          <section class="row">
+            <div class="col-12 col-lg-12">
+              <div class="row">
+                <div class="col-12">
+                  <section id="multiple-column-form">
+                    <div class="row match-height">
+                      <div class="col-12">
+                        <div class="card" style="margin-bottom: 100%">
+                          <div class="card-body">
+                            <div class="table-responsive">
+                              <table id="table" class="table mb-0">
+                                <tbody></tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <footer class="footer">
+          <p>&copy; 2025 Tous droits réservés.</p>
+        </footer>
+      </div>
+    </div>
+    <div id="api-config" data-api-url="{{ api_url }}"></div>
+
+    <style>
+      .flag-container {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: inline-block;
+      }
+
+      .flag {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+
+    <script type="text/javascript">
+      const apiUrl = document.getElementById("api-config").dataset.apiUrl;
+
+      function get_match_details(id) {
+        window.location.href = `${apiUrl}/matches/match/${id}/`;
+      }
+
+      $(document).ready(() => {
+        const tbody = document.querySelector("#table tbody");
+
+        function appendRow(label, value) {
+          const row = document.createElement("tr");
+          const descCell = document.createElement("td");
+          descCell.textContent = label;
+          const valueCell = document.createElement("td");
+          valueCell.textContent = value;
+          row.append(descCell, valueCell);
+          tbody.appendChild(row);
+        }
+
+        function appendLinkRow(label, url) {
+          const row = document.createElement("tr");
+          const descCell = document.createElement("td");
+          descCell.textContent = label;
+          const valueCell = document.createElement("td");
+          const link = document.createElement("a");
+          link.href = url;
+          link.textContent = "Voir la vidéo";
+          link.target = "_blank";
+          valueCell.appendChild(link);
+          row.append(descCell, valueCell);
+          tbody.appendChild(row);
+        }
+
+        function appendTitleRow(title) {
+          const row = document.createElement("tr");
+          const cell = document.createElement("td");
+          cell.textContent = title;
+          cell.colSpan = 2;
+          cell.style.textAlign = "center";
+          cell.style.fontWeight = "bold";
+          row.appendChild(cell);
+          tbody.appendChild(row);
+        }
+
+        function tableRow(match) {
+          appendRow("Catégorie", match.category.name);
+          appendRow(
+            "Date du match",
+            new Date(match.match_date).toLocaleDateString()
+          );
+          appendRow("Lieu", match.location.name);
+          appendRow("Première équipe", match.first.name);
+          appendRow("Deuxième équipe", match.second.name);
+          appendRow("Résultat final", match.finale_result);
+
+          appendTitleRow("MATCH COMPLET");
+          appendLinkRow("Voir le match", `${apiUrl}${match.video}`);
+
+          if (match.individualities?.length) {
+            appendTitleRow("INDIVIDUALITES");
+            match.individualities.forEach((ind) => {
+              appendLinkRow(ind.description, `${apiUrl}${ind.video}`);
+            });
+          }
+
+          if (match.analyses?.length) {
+            appendTitleRow("ANALYSES");
+            match.analyses.forEach((a) => {
+              appendLinkRow(a.description, `${apiUrl}${a.video}`);
+            });
+          }
+        }
+
+        function getMatchIdFromUrl() {
+          const parts = window.location.pathname.split("/").filter(Boolean);
+          const matchIndex = parts.indexOf("match");
+          return matchIndex !== -1 && parts[matchIndex + 1]
+            ? parts[matchIndex + 1]
+            : null;
+        }
+
+        const matchId = getMatchIdFromUrl();
+        console.log("Match ID: ", matchId);
+
+        function fetchData() {
+          fetch(`${apiUrl}/matches/api/match_details?match=${matchId}`)
+            .then((res) => res.json())
+            .then((data) => {
+              tbody.innerHTML = "";
+              tableRow(data);
+            });
+          // .catch(() => setTimeout(fetchData, 3000));
+        }
+
+        fetchData();
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        const sidebar = $("#sidebar");
+
+        // Si écran est < 992px, on cache la sidebar au départ
+        if (window.innerWidth < 992) {
+          sidebar.removeClass("active");
+        } else {
+          sidebar.addClass("active"); // assure qu'elle est affichée sur grand écran
+        }
+
+        // Toggle au clic du hamburger
+        $(".navbar-toggler").click(function () {
+          sidebar.toggleClass("active");
+        });
+
+        // Optionnel : réagir si l’utilisateur redimensionne l’écran
+        $(window).resize(function () {
+          if (window.innerWidth < 900) {
+            sidebar.removeClass("active");
+          } else {
+            sidebar.addClass("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
