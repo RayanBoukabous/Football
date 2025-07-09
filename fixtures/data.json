@@ -1,7 +1,1158 @@
-hey
-hey
-hey
-hey
-hey
-hey
-[{"model": "admin.logentry", "pk": 1, "fields": {"action_time": "2024-08-08T10:20:37.105Z", "user": 1, "content_type": 4, "object_id": "2", "object_repr": "test", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 2, "fields": {"action_time": "2024-08-08T10:20:57.242Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "test", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 3, "fields": {"action_time": "2024-08-08T10:33:56.517Z", "user": 1, "content_type": 10, "object_id": "1", "object_repr": "Algerie", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 4, "fields": {"action_time": "2024-08-08T10:34:05.922Z", "user": 1, "content_type": 9, "object_id": "2", "object_repr": "U17", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 5, "fields": {"action_time": "2024-08-08T10:35:29.870Z", "user": 1, "content_type": 9, "object_id": "1", "object_repr": "test", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 6, "fields": {"action_time": "2024-08-08T10:36:05.068Z", "user": 1, "content_type": 13, "object_id": "1", "object_repr": "Rayan", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 7, "fields": {"action_time": "2024-08-08T10:37:08.866Z", "user": 1, "content_type": 14, "object_id": "1", "object_repr": "MCO", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 8, "fields": {"action_time": "2024-08-08T10:38:01.085Z", "user": 1, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-08 20:00:00+00:00 at Algerie", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 9, "fields": {"action_time": "2024-08-08T10:38:48.973Z", "user": 1, "content_type": 11, "object_id": "1", "object_repr": "Individuality 1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 10, "fields": {"action_time": "2024-08-08T10:39:11.562Z", "user": 1, "content_type": 4, "object_id": "2", "object_repr": "test", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 11, "fields": {"action_time": "2024-08-08T11:31:49.996Z", "user": 3, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-08 20:00:00+00:00 at Algerie", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Video\"]}}]"}}, {"model": "admin.logentry", "pk": 12, "fields": {"action_time": "2024-08-08T12:39:43.142Z", "user": 3, "content_type": 12, "object_id": "2", "object_repr": "Match on 2024-08-08 12:39:32+00:00 at tet", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 13, "fields": {"action_time": "2024-08-08T13:03:04.494Z", "user": 3, "content_type": 12, "object_id": "3", "object_repr": "Match on 2024-08-08 13:02:28+00:00 at gg", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 14, "fields": {"action_time": "2024-08-11T00:58:37.316Z", "user": 3, "content_type": 12, "object_id": "3", "object_repr": "Match on 2024-08-08 13:02:28+00:00 at gg", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 15, "fields": {"action_time": "2024-08-11T00:58:37.321Z", "user": 3, "content_type": 12, "object_id": "2", "object_repr": "Match on 2024-08-08 12:39:32+00:00 at tet", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 16, "fields": {"action_time": "2024-08-11T00:58:37.324Z", "user": 3, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-08 20:00:00+00:00 at Algerie", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 17, "fields": {"action_time": "2024-08-11T01:03:30.513Z", "user": 3, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-11 20:00:28+00:00 at Algerie", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 18, "fields": {"action_time": "2024-08-11T01:16:16.369Z", "user": 3, "content_type": 11, "object_id": "2", "object_repr": "Individuality 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 19, "fields": {"action_time": "2024-08-11T02:05:54.749Z", "user": 3, "content_type": 13, "object_id": "1", "object_repr": "Rayan", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 20, "fields": {"action_time": "2024-08-11T02:13:17.199Z", "user": 3, "content_type": 15, "object_id": "1", "object_repr": "Ailier Gauche", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 21, "fields": {"action_time": "2024-08-11T02:13:22.593Z", "user": 3, "content_type": 15, "object_id": "2", "object_repr": "Ailier Droit", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 22, "fields": {"action_time": "2024-08-11T02:17:33.873Z", "user": 3, "content_type": 13, "object_id": "1", "object_repr": "BOUKABOUS Rayan", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 23, "fields": {"action_time": "2024-08-11T02:19:57.969Z", "user": 3, "content_type": 11, "object_id": "3", "object_repr": "Individuality 3", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 24, "fields": {"action_time": "2024-08-11T13:03:56.753Z", "user": 3, "content_type": 13, "object_id": "2", "object_repr": "test", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 25, "fields": {"action_time": "2024-08-11T13:04:30.502Z", "user": 3, "content_type": 11, "object_id": "4", "object_repr": "Individuality 4", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 26, "fields": {"action_time": "2024-08-11T13:05:48.146Z", "user": 3, "content_type": 13, "object_id": "2", "object_repr": "test", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"}}, {"model": "admin.logentry", "pk": 27, "fields": {"action_time": "2024-08-11T13:08:21.302Z", "user": 3, "content_type": 15, "object_id": "3", "object_repr": "sodomi", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 28, "fields": {"action_time": "2024-08-11T13:08:42.034Z", "user": 3, "content_type": 13, "object_id": "3", "object_repr": "Djalil", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 29, "fields": {"action_time": "2024-08-11T13:15:34.796Z", "user": 3, "content_type": 4, "object_id": "4", "object_repr": "djalil", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 30, "fields": {"action_time": "2024-08-11T21:24:31.886Z", "user": 3, "content_type": 15, "object_id": "3", "object_repr": "sodomi", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 31, "fields": {"action_time": "2024-08-11T21:25:25.278Z", "user": 3, "content_type": 10, "object_id": "2", "object_repr": "Test", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 32, "fields": {"action_time": "2024-08-11T21:25:46.367Z", "user": 3, "content_type": 10, "object_id": "2", "object_repr": "Test", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 33, "fields": {"action_time": "2024-08-11T21:45:30.023Z", "user": 3, "content_type": 12, "object_id": "2", "object_repr": "Match on 2024-08-11 21:45:06+00:00 at Algerie", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 34, "fields": {"action_time": "2024-08-13T16:08:52.889Z", "user": 3, "content_type": 12, "object_id": "2", "object_repr": "Match on 2024-08-11 21:45:06+00:00 at Algerie", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 35, "fields": {"action_time": "2024-08-13T16:08:52.893Z", "user": 3, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-11 20:00:28+00:00 at Algerie", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 36, "fields": {"action_time": "2024-08-13T16:10:06.692Z", "user": 3, "content_type": 14, "object_id": "1", "object_repr": "MCO", "action_flag": 3, "change_message": ""}}, {"model": "admin.logentry", "pk": 37, "fields": {"action_time": "2024-08-13T16:11:08.328Z", "user": 3, "content_type": 14, "object_id": "2", "object_repr": "default", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 38, "fields": {"action_time": "2024-08-13T16:24:17.248Z", "user": 3, "content_type": 14, "object_id": "2", "object_repr": "default", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Flag\"]}}]"}}, {"model": "admin.logentry", "pk": 39, "fields": {"action_time": "2024-08-13T16:24:36.788Z", "user": 3, "content_type": 14, "object_id": "3", "object_repr": "Test", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 40, "fields": {"action_time": "2024-08-13T16:25:08.357Z", "user": 3, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-13 16:24:45+00:00 at Algerie", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 41, "fields": {"action_time": "2024-08-19T13:41:55.815Z", "user": 3, "content_type": 14, "object_id": "3", "object_repr": "Mali", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Flag\"]}}]"}}, {"model": "admin.logentry", "pk": 42, "fields": {"action_time": "2024-08-19T13:42:07.615Z", "user": 3, "content_type": 14, "object_id": "2", "object_repr": "ALGERIE", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Flag\"]}}]"}}, {"model": "admin.logentry", "pk": 43, "fields": {"action_time": "2024-08-19T13:42:30.010Z", "user": 3, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-13 16:24:45+00:00 at Algerie", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 44, "fields": {"action_time": "2024-08-19T13:42:56.148Z", "user": 3, "content_type": 10, "object_id": "3", "object_repr": "Mali", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 45, "fields": {"action_time": "2024-08-19T13:43:26.208Z", "user": 3, "content_type": 12, "object_id": "2", "object_repr": "Match on 2024-08-19 13:43:03+00:00 at Algerie", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 46, "fields": {"action_time": "2024-08-20T14:39:10.051Z", "user": 3, "content_type": 11, "object_id": "5", "object_repr": "Individuality 5", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 47, "fields": {"action_time": "2024-08-20T14:39:34.043Z", "user": 3, "content_type": 11, "object_id": "6", "object_repr": "Individuality 6", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 48, "fields": {"action_time": "2024-08-20T14:54:05.875Z", "user": 3, "content_type": 11, "object_id": "6", "object_repr": "Individuality 6", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"}}, {"model": "admin.logentry", "pk": 49, "fields": {"action_time": "2024-08-20T14:54:13.599Z", "user": 3, "content_type": 11, "object_id": "5", "object_repr": "Individuality 5", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"}}, {"model": "admin.logentry", "pk": 50, "fields": {"action_time": "2024-08-20T15:02:03.733Z", "user": 3, "content_type": 16, "object_id": "1", "object_repr": "Analyse 1", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 51, "fields": {"action_time": "2025-06-26T08:56:31.719Z", "user": 5, "content_type": 12, "object_id": "3", "object_repr": "Match on 2025-06-26 08:56:05+00:00 at Algerie", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 52, "fields": {"action_time": "2025-06-26T08:57:50.842Z", "user": 5, "content_type": 14, "object_id": "3", "object_repr": "Mali", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Country\", \"Flag\"]}}]"}}, {"model": "admin.logentry", "pk": 53, "fields": {"action_time": "2025-06-26T08:59:26.497Z", "user": 5, "content_type": 11, "object_id": "6", "object_repr": "Individuality 6", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Player\", \"Team\"]}}]"}}, {"model": "admin.logentry", "pk": 54, "fields": {"action_time": "2025-06-26T23:27:15.203Z", "user": 5, "content_type": 10, "object_id": "4", "object_repr": "stade", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 55, "fields": {"action_time": "2025-06-26T23:33:52.015Z", "user": 5, "content_type": 16, "object_id": "2", "object_repr": "Analyse 2", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 56, "fields": {"action_time": "2025-06-27T04:47:41.397Z", "user": 5, "content_type": 4, "object_id": "6", "object_repr": "abc", "action_flag": 1, "change_message": "[{\"added\": {}}]"}}, {"model": "admin.logentry", "pk": 57, "fields": {"action_time": "2025-06-27T04:48:20.837Z", "user": 5, "content_type": 4, "object_id": "6", "object_repr": "nationale_a_prime", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"}}, {"model": "admin.logentry", "pk": 58, "fields": {"action_time": "2025-06-27T04:55:42.426Z", "user": 5, "content_type": 4, "object_id": "1", "object_repr": "rayan", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"}}, {"model": "admin.logentry", "pk": 59, "fields": {"action_time": "2025-06-27T04:55:52.497Z", "user": 5, "content_type": 4, "object_id": "1", "object_repr": "rayan", "action_flag": 2, "change_message": "[]"}}, {"model": "admin.logentry", "pk": 60, "fields": {"action_time": "2025-06-27T06:12:49.688Z", "user": 5, "content_type": 12, "object_id": "1", "object_repr": "Match on 2024-08-13 16:24:45+00:00 at Algerie", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Video\"]}}]"}}, {"model": "admin.logentry", "pk": 61, "fields": {"action_time": "2025-06-28T10:56:25.103Z", "user": 5, "content_type": 12, "object_id": "3", "object_repr": "Match on 2025-06-26 08:56:05+00:00 at Algerie", "action_flag": 2, "change_message": "[{\"changed\": {\"fields\": [\"Video\"]}}]"}}, {"model": "auth.user", "pk": 1, "fields": {"password": "pbkdf2_sha256$720000$upPfYAasKavdjhHRb7sN1N$eaR75Ui7DfSbIcYaWlCgyB/sQthPdxUVf2rJnSWB0Lo=", "last_login": "2025-06-27T05:10:49.065Z", "is_superuser": true, "username": "rayan", "first_name": "", "last_name": "", "email": "", "is_staff": true, "is_active": true, "date_joined": "2024-08-06T14:51:40Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 3, "fields": {"password": "pbkdf2_sha256$720000$sacAJlMSEKLG9uDvHx5Sg2$TZuPhwxNnSJsjLxJ10Fg7MiIlictCV2UpzyqKRbEuq0=", "last_login": "2024-08-19T14:20:07.627Z", "is_superuser": true, "username": "admin", "first_name": "", "last_name": "", "email": "", "is_staff": true, "is_active": true, "date_joined": "2024-08-08T10:41:28.072Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 4, "fields": {"password": "pbkdf2_sha256$720000$BPjvyCpZrWoyLKiUgEqQlB$M3If3muLQdOgFDmug3JtUDPqgskBYQpQMSGAp2mNVcw=", "last_login": null, "is_superuser": false, "username": "djalil", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2024-08-11T13:15:34.017Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 5, "fields": {"password": "pbkdf2_sha256$720000$Ta1PYWaADKn3XOgmjCTofc$wZYsIOTxB98LhsePk52rf57f6goh3RqsZ0JpLa6MPj4=", "last_login": "2025-06-27T22:11:41.009Z", "is_superuser": true, "username": "test", "first_name": "", "last_name": "", "email": "", "is_staff": true, "is_active": true, "date_joined": "2025-06-26T08:53:04.481Z", "groups": [], "user_permissions": []}}, {"model": "auth.user", "pk": 6, "fields": {"password": "pbkdf2_sha256$720000$NpFsiJGsUzjlCxdO2YGOsO$zojVQhKYaPHYdypzUXoo8lYVgtAqabPH/iyAljCJT9k=", "last_login": null, "is_superuser": false, "username": "nationale_a_prime", "first_name": "", "last_name": "", "email": "", "is_staff": false, "is_active": true, "date_joined": "2025-06-27T04:47:40Z", "groups": [], "user_permissions": []}}, {"model": "sessions.session", "pk": "4k5q82qvwf4h05pz4kiz2yviu9lr5pos", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1G9:dczB0awZ33HwgmBT25pJNZCgSaItb4NezkYAhUoY1yc", "expire_date": "2025-07-11T05:04:21.471Z"}}, {"model": "sessions.session", "pk": "7d0epmp1sevj8s3qxkk5hugcx8jamlal", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1BE:WOfCRotKIMcRgleK0cfVR8lH3Y7GLMu3tq18xVWdWIg", "expire_date": "2025-07-11T04:59:16.419Z"}}, {"model": "sessions.session", "pk": "8qla34k2q34990n5336247wr41x43qpc", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1MP:MCVuquHzskz6fTkynQiGkB19mnOul7jUVedQ0zMv53A", "expire_date": "2025-07-11T05:10:49.068Z"}}, {"model": "sessions.session", "pk": "e880m2rrflvngv11147zrb7ift0h589n", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1ID:4Ua1F5SBG_CNvKqaigbLfjNTJS8f4F3sJ-tyztoHLxU", "expire_date": "2025-07-11T05:06:29.869Z"}}, {"model": "sessions.session", "pk": "g5tnwjyyj3tc28agdd8xjo4o03yvjc5j", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1An:XTHCXY_irPAiw8lAuqw_EnHYZ7ctKHmJWUCxc_lGg6Y", "expire_date": "2025-07-11T04:58:49.742Z"}}, {"model": "sessions.session", "pk": "lwe3tg2fna7glf4a3w485ead6arxdmod", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGlmx179Q0nMGa7Nr4wCypTipEHeHSCmgfTPzXiLitpa49bTEmcVZgDj9bhPSI9Ud8B3rrUlqdV3mSe6KPGiX18bpeTncv4OCvXxrRQQ0eUAPrJW3Ayo32gyWgtEMJg8KM0MiABdCzpx0UCZoZpdHw068P936N9g:1sg3Et:3OrNmPXAG6QqO5xlSOyg9EEFsNIGy4xGvpeIeCrA8BQ", "expire_date": "2024-09-02T14:20:07.630Z"}}, {"model": "sessions.session", "pk": "mnqgbb35ntzyj5vc08febswmspwwf3dz", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1DF:vmpeXkjDbbySgR6YSVyIHSReN4QQOL8B4ZRIotkxowU", "expire_date": "2025-07-11T05:01:21.691Z"}}, {"model": "sessions.session", "pk": "mo0jr4e6385av7e1l1xi16pk1d7sw0i7", "fields": {"session_data": ".eJxVjE0OwiAYRO_C2hAKhYJL9z0D-X6oVA1NSrsy3l2adKGrSea9mbeIsG857jWtcWZxFVZcfjsEeqZyAH5AuS-SlrKtM8pDkSetclw4vW6n-3eQoea2RqMGj9obpCEEaDlNaCmB00zKgu0JbdLeUePWqc6FHk3gDpkMKxafL_XXOGU:1uV17m:k6_2nxGMq6VfX50hBKUTo-wfzBGOZhJ3H9VA30bL114", "expire_date": "2025-07-11T04:55:42.438Z"}}, {"model": "sessions.session", "pk": "omtoqmhnm5oul8eoa9ohmdhvlvdvbu0c", "fields": {"session_data": ".eJxVjDsOwjAQBe_iGlmx179Q0nMGa7Nr4wCypTipEHeHSCmgfTPzXiLitpa49bTEmcVZgDj9bhPSI9Ud8B3rrUlqdV3mSe6KPGiX18bpeTncv4OCvXxrRQQ0eUAPrJW3Ayo32gyWgtEMJg8KM0MiABdCzpx0UCZoZpdHw068P936N9g:1sc0aP:QGrEhD3VO37hty6NySC7GGLKBVmBItodZ9AVM_nmCC4", "expire_date": "2024-08-22T10:41:37.746Z"}}, {"model": "sessions.session", "pk": "sibnuymkkv4xxsgjvuau1mj3469299j9", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV18q:ylyqal63Acb_m6mn6COiYbfYNFZwiDMBeEWRxJDNFyQ", "expire_date": "2025-07-11T04:56:48.343Z"}}, {"model": "sessions.session", "pk": "uiux500tjtp9d6qedekmpzhcx3djxf52", "fields": {"session_data": ".eJxVjE0OwiAYRO_C2hAKhYJL9z0D-X6oVA1NSrsy3l2adKGrSea9mbeIsG857jWtcWZxFVZcfjsEeqZyAH5AuS-SlrKtM8pDkSetclw4vW6n-3eQoea2RqMGj9obpCEEaDlNaCmB00zKgu0JbdLeUePWqc6FHk3gDpkMKxafL_XXOGU:1uVHIL:baDaZNPRnPHBGlJc6pNxMTNDF6CmYLeg0riLwn_s_Os", "expire_date": "2025-07-11T22:11:41.023Z"}}, {"model": "sessions.session", "pk": "zc4kvl909c4gyxa2lvvufe6jcqfdo5se", "fields": {"session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1A1:XhNbAIqCp_hfniD7S5jaekvqtL34k3EMO2jivL6FH5k", "expire_date": "2025-07-11T04:58:01.087Z"}}, {"model": "accounts.userprofile", "pk": 1, "fields": {"user": 6, "date_of_birth": null, "country_of_birth": null, "category": null, "first_name": "", "last_name": "", "position": null, "strong_foot": null, "weak_foot": null, "observations": null}}, {"model": "categorys.category", "pk": 2, "fields": {"name": "U17"}}, {"model": "countrys.country", "pk": 1, "fields": {"name": "Algerie"}}, {"model": "countrys.country", "pk": 3, "fields": {"name": "Mali"}}, {"model": "countrys.country", "pk": 4, "fields": {"name": "stade"}}, {"model": "individualitys.individuality", "pk": 5, "fields": {"description": "Attaque", "player": null, "team": null, "match": 1, "video": "individual_videos/mobizen_20240714_130857_1.mp4"}}, {"model": "individualitys.individuality", "pk": 6, "fields": {"description": "Défense", "player": 3, "team": 2, "match": 1, "video": "individual_videos/Screen_Recording_2024-01-27_at_10.19.37.mp4"}}, {"model": "matches.match", "pk": 1, "fields": {"category": 2, "match_date": "2024-08-13T16:24:45Z", "first": 2, "second": 3, "finale_result": "2-1", "location": 1, "video": "media/match_videos/Invitation_Card.mp4"}}, {"model": "matches.match", "pk": 2, "fields": {"category": 2, "match_date": "2024-08-19T13:43:03Z", "first": 2, "second": 3, "finale_result": "4-2", "location": 1, "video": "media/match_videos/mobizen_20240714_130857_1_O1NYFmP.mp4"}}, {"model": "matches.match", "pk": 3, "fields": {"category": 2, "match_date": "2025-06-26T08:56:05Z", "first": 3, "second": 2, "finale_result": "4-1", "location": 1, "video": "media/match_videos/26-06-f.mp4"}}, {"model": "players.player", "pk": 3, "fields": {"category": 2, "name": "Djalil", "birthdate": "2024-08-11", "photo": "", "nationality": 1, "strong_feet": "Droit", "weak_feet": "Gauche", "strengths": "", "weaknesses": "", "club": null, "observations": "", "positions": []}}, {"model": "teams.team", "pk": 2, "fields": {"country": 1, "name": "ALGERIE", "established_year": 2024, "flag": "flags/Screenshot_2024-08-19_at_14.41.20_cdNNSsl.png"}}, {"model": "teams.team", "pk": 3, "fields": {"country": 3, "name": "Mali", "established_year": 2024, "flag": "flags/mali.png"}}, {"model": "postes.position", "pk": 1, "fields": {"name": "Ailier Gauche"}}, {"model": "postes.position", "pk": 2, "fields": {"name": "Ailier Droit"}}, {"model": "analyses.analyse", "pk": 1, "fields": {"description": "Phase defensive", "team": 2, "match": 1, "video": "analyses/Screen_Recording_2024-01-27_at_10.19.37.mp4"}}, {"model": "analyses.analyse", "pk": 2, "fields": {"description": "Analyse équipe locale", "team": 2, "match": 1, "video": "analyses/Invitation_card_2.mp4"}}]
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-08-08T10:20:37.105Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-08-08T10:20:57.242Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-08-08T10:33:56.517Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Algerie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-08-08T10:34:05.922Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "U17",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-08-08T10:35:29.870Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "test",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-08-08T10:36:05.068Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Rayan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-08-08T10:37:08.866Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "MCO",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-08-08T10:38:01.085Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-08 20:00:00+00:00 at Algerie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-08-08T10:38:48.973Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "Individuality 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-08-08T10:39:11.562Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-08-08T11:31:49.996Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-08 20:00:00+00:00 at Algerie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-08-08T12:39:43.142Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Match on 2024-08-08 12:39:32+00:00 at tet",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-08-08T13:03:04.494Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Match on 2024-08-08 13:02:28+00:00 at gg",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-08-11T00:58:37.316Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Match on 2024-08-08 13:02:28+00:00 at gg",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-08-11T00:58:37.321Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Match on 2024-08-08 12:39:32+00:00 at tet",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-08-11T00:58:37.324Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-08 20:00:00+00:00 at Algerie",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-08-11T01:03:30.513Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-11 20:00:28+00:00 at Algerie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-08-11T01:16:16.369Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Individuality 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-08-11T02:05:54.749Z",
+    "user": 3,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "Rayan",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-08-11T02:13:17.199Z",
+    "user": 3,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Ailier Gauche",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-08-11T02:13:22.593Z",
+    "user": 3,
+    "content_type": 15,
+    "object_id": "2",
+    "object_repr": "Ailier Droit",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-08-11T02:17:33.873Z",
+    "user": 3,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "BOUKABOUS Rayan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-08-11T02:19:57.969Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "3",
+    "object_repr": "Individuality 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-08-11T13:03:56.753Z",
+    "user": 3,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-08-11T13:04:30.502Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "4",
+    "object_repr": "Individuality 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-08-11T13:05:48.146Z",
+    "user": 3,
+    "content_type": 13,
+    "object_id": "2",
+    "object_repr": "test",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-08-11T13:08:21.302Z",
+    "user": 3,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "sodomi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-08-11T13:08:42.034Z",
+    "user": 3,
+    "content_type": 13,
+    "object_id": "3",
+    "object_repr": "Djalil",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-08-11T13:15:34.796Z",
+    "user": 3,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "djalil",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-08-11T21:24:31.886Z",
+    "user": 3,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "sodomi",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-08-11T21:25:25.278Z",
+    "user": 3,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-08-11T21:25:46.367Z",
+    "user": 3,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Test",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-08-11T21:45:30.023Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Match on 2024-08-11 21:45:06+00:00 at Algerie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-08-13T16:08:52.889Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Match on 2024-08-11 21:45:06+00:00 at Algerie",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-08-13T16:08:52.893Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-11 20:00:28+00:00 at Algerie",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-08-13T16:10:06.692Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "1",
+    "object_repr": "MCO",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-08-13T16:11:08.328Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "default",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-08-13T16:24:17.248Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "default",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Flag\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-08-13T16:24:36.788Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-08-13T16:25:08.357Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-13 16:24:45+00:00 at Algerie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-08-19T13:41:55.815Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Mali",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Flag\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-08-19T13:42:07.615Z",
+    "user": 3,
+    "content_type": 14,
+    "object_id": "2",
+    "object_repr": "ALGERIE",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Name\", \"Flag\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-08-19T13:42:30.010Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-13 16:24:45+00:00 at Algerie",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-08-19T13:42:56.148Z",
+    "user": 3,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Mali",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-08-19T13:43:26.208Z",
+    "user": 3,
+    "content_type": 12,
+    "object_id": "2",
+    "object_repr": "Match on 2024-08-19 13:43:03+00:00 at Algerie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-08-20T14:39:10.051Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Individuality 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-08-20T14:39:34.043Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Individuality 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-08-20T14:54:05.875Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Individuality 6",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-08-20T14:54:13.599Z",
+    "user": 3,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "Individuality 5",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-08-20T15:02:03.733Z",
+    "user": 3,
+    "content_type": 16,
+    "object_id": "1",
+    "object_repr": "Analyse 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-06-26T08:56:31.719Z",
+    "user": 5,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Match on 2025-06-26 08:56:05+00:00 at Algerie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-06-26T08:57:50.842Z",
+    "user": 5,
+    "content_type": 14,
+    "object_id": "3",
+    "object_repr": "Mali",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Country\", \"Flag\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-06-26T08:59:26.497Z",
+    "user": 5,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "Individuality 6",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Player\", \"Team\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-06-26T23:27:15.203Z",
+    "user": 5,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "stade",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-06-26T23:33:52.015Z",
+    "user": 5,
+    "content_type": 16,
+    "object_id": "2",
+    "object_repr": "Analyse 2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-06-27T04:47:41.397Z",
+    "user": 5,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "abc",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-06-27T04:48:20.837Z",
+    "user": 5,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "nationale_a_prime",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-06-27T04:55:42.426Z",
+    "user": 5,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "rayan",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-06-27T04:55:52.497Z",
+    "user": 5,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "rayan",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-06-27T06:12:49.688Z",
+    "user": 5,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Match on 2024-08-13 16:24:45+00:00 at Algerie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-06-28T10:56:25.103Z",
+    "user": 5,
+    "content_type": 12,
+    "object_id": "3",
+    "object_repr": "Match on 2025-06-26 08:56:05+00:00 at Algerie",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Video\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$upPfYAasKavdjhHRb7sN1N$eaR75Ui7DfSbIcYaWlCgyB/sQthPdxUVf2rJnSWB0Lo=",
+    "last_login": "2025-06-27T05:10:49.065Z",
+    "is_superuser": true,
+    "username": "rayan",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-06T14:51:40Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$sacAJlMSEKLG9uDvHx5Sg2$TZuPhwxNnSJsjLxJ10Fg7MiIlictCV2UpzyqKRbEuq0=",
+    "last_login": "2024-08-19T14:20:07.627Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-08-08T10:41:28.072Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$BPjvyCpZrWoyLKiUgEqQlB$M3If3muLQdOgFDmug3JtUDPqgskBYQpQMSGAp2mNVcw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "djalil",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-11T13:15:34.017Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$Ta1PYWaADKn3XOgmjCTofc$wZYsIOTxB98LhsePk52rf57f6goh3RqsZ0JpLa6MPj4=",
+    "last_login": "2025-06-27T22:11:41.009Z",
+    "is_superuser": true,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-06-26T08:53:04.481Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$NpFsiJGsUzjlCxdO2YGOsO$zojVQhKYaPHYdypzUXoo8lYVgtAqabPH/iyAljCJT9k=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "nationale_a_prime",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-06-27T04:47:40Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4k5q82qvwf4h05pz4kiz2yviu9lr5pos",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1G9:dczB0awZ33HwgmBT25pJNZCgSaItb4NezkYAhUoY1yc",
+    "expire_date": "2025-07-11T05:04:21.471Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7d0epmp1sevj8s3qxkk5hugcx8jamlal",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1BE:WOfCRotKIMcRgleK0cfVR8lH3Y7GLMu3tq18xVWdWIg",
+    "expire_date": "2025-07-11T04:59:16.419Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8qla34k2q34990n5336247wr41x43qpc",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1MP:MCVuquHzskz6fTkynQiGkB19mnOul7jUVedQ0zMv53A",
+    "expire_date": "2025-07-11T05:10:49.068Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e880m2rrflvngv11147zrb7ift0h589n",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1ID:4Ua1F5SBG_CNvKqaigbLfjNTJS8f4F3sJ-tyztoHLxU",
+    "expire_date": "2025-07-11T05:06:29.869Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "g5tnwjyyj3tc28agdd8xjo4o03yvjc5j",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1An:XTHCXY_irPAiw8lAuqw_EnHYZ7ctKHmJWUCxc_lGg6Y",
+    "expire_date": "2025-07-11T04:58:49.742Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lwe3tg2fna7glf4a3w485ead6arxdmod",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmx179Q0nMGa7Nr4wCypTipEHeHSCmgfTPzXiLitpa49bTEmcVZgDj9bhPSI9Ud8B3rrUlqdV3mSe6KPGiX18bpeTncv4OCvXxrRQQ0eUAPrJW3Ayo32gyWgtEMJg8KM0MiABdCzpx0UCZoZpdHw068P936N9g:1sg3Et:3OrNmPXAG6QqO5xlSOyg9EEFsNIGy4xGvpeIeCrA8BQ",
+    "expire_date": "2024-09-02T14:20:07.630Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mnqgbb35ntzyj5vc08febswmspwwf3dz",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1DF:vmpeXkjDbbySgR6YSVyIHSReN4QQOL8B4ZRIotkxowU",
+    "expire_date": "2025-07-11T05:01:21.691Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mo0jr4e6385av7e1l1xi16pk1d7sw0i7",
+  "fields": {
+    "session_data": ".eJxVjE0OwiAYRO_C2hAKhYJL9z0D-X6oVA1NSrsy3l2adKGrSea9mbeIsG857jWtcWZxFVZcfjsEeqZyAH5AuS-SlrKtM8pDkSetclw4vW6n-3eQoea2RqMGj9obpCEEaDlNaCmB00zKgu0JbdLeUePWqc6FHk3gDpkMKxafL_XXOGU:1uV17m:k6_2nxGMq6VfX50hBKUTo-wfzBGOZhJ3H9VA30bL114",
+    "expire_date": "2025-07-11T04:55:42.438Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "omtoqmhnm5oul8eoa9ohmdhvlvdvbu0c",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlmx179Q0nMGa7Nr4wCypTipEHeHSCmgfTPzXiLitpa49bTEmcVZgDj9bhPSI9Ud8B3rrUlqdV3mSe6KPGiX18bpeTncv4OCvXxrRQQ0eUAPrJW3Ayo32gyWgtEMJg8KM0MiABdCzpx0UCZoZpdHw068P936N9g:1sc0aP:QGrEhD3VO37hty6NySC7GGLKBVmBItodZ9AVM_nmCC4",
+    "expire_date": "2024-08-22T10:41:37.746Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sibnuymkkv4xxsgjvuau1mj3469299j9",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV18q:ylyqal63Acb_m6mn6COiYbfYNFZwiDMBeEWRxJDNFyQ",
+    "expire_date": "2025-07-11T04:56:48.343Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uiux500tjtp9d6qedekmpzhcx3djxf52",
+  "fields": {
+    "session_data": ".eJxVjE0OwiAYRO_C2hAKhYJL9z0D-X6oVA1NSrsy3l2adKGrSea9mbeIsG857jWtcWZxFVZcfjsEeqZyAH5AuS-SlrKtM8pDkSetclw4vW6n-3eQoea2RqMGj9obpCEEaDlNaCmB00zKgu0JbdLeUePWqc6FHk3gDpkMKxafL_XXOGU:1uVHIL:baDaZNPRnPHBGlJc6pNxMTNDF6CmYLeg0riLwn_s_Os",
+    "expire_date": "2025-07-11T22:11:41.023Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zc4kvl909c4gyxa2lvvufe6jcqfdo5se",
+  "fields": {
+    "session_data": ".eJxVjEsOwiAUAO_C2hAovD5w6b5nIHweUjWQlHZlvLsh6UK3M5N5M-ePvbij0-bWxK5MsssvCz4-qQ6RHr7eG4-t7tsa-Ej4aTtfWqLX7Wz_BsX3MrZAZCJkK3AOIIJCStZPGpOOhjRCBhGlzjFZkCQIUSk0M4DFLP1E7PMF4J83jw:1uV1A1:XhNbAIqCp_hfniD7S5jaekvqtL34k3EMO2jivL6FH5k",
+    "expire_date": "2025-07-11T04:58:01.087Z"
+  }
+},
+{
+  "model": "accounts.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": 6,
+    "date_of_birth": null,
+    "country_of_birth": null,
+    "category": null,
+    "first_name": "",
+    "last_name": "",
+    "position": null,
+    "strong_foot": null,
+    "weak_foot": null,
+    "observations": null
+  }
+},
+{
+  "model": "categorys.category",
+  "pk": 2,
+  "fields": {
+    "name": "U17"
+  }
+},
+{
+  "model": "countrys.country",
+  "pk": 1,
+  "fields": {
+    "name": "Algerie"
+  }
+},
+{
+  "model": "countrys.country",
+  "pk": 3,
+  "fields": {
+    "name": "Mali"
+  }
+},
+{
+  "model": "countrys.country",
+  "pk": 4,
+  "fields": {
+    "name": "stade"
+  }
+},
+{
+  "model": "individualitys.individuality",
+  "pk": 5,
+  "fields": {
+    "description": "Attaque",
+    "player": null,
+    "team": null,
+    "match": 1,
+    "video": "individual_videos/mobizen_20240714_130857_1.mp4"
+  }
+},
+{
+  "model": "individualitys.individuality",
+  "pk": 6,
+  "fields": {
+    "description": "Défense",
+    "player": 3,
+    "team": 2,
+    "match": 1,
+    "video": "individual_videos/Screen_Recording_2024-01-27_at_10.19.37.mp4"
+  }
+},
+{
+  "model": "matches.match",
+  "pk": 1,
+  "fields": {
+    "category": 2,
+    "match_date": "2024-08-13T16:24:45Z",
+    "first": 2,
+    "second": 3,
+    "finale_result": "2-1",
+    "location": 1,
+    "video": "media/match_videos/Invitation_Card.mp4"
+  }
+},
+{
+  "model": "matches.match",
+  "pk": 2,
+  "fields": {
+    "category": 2,
+    "match_date": "2024-08-19T13:43:03Z",
+    "first": 2,
+    "second": 3,
+    "finale_result": "4-2",
+    "location": 1,
+    "video": "media/match_videos/mobizen_20240714_130857_1_O1NYFmP.mp4"
+  }
+},
+{
+  "model": "matches.match",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "match_date": "2025-06-26T08:56:05Z",
+    "first": 3,
+    "second": 2,
+    "finale_result": "4-1",
+    "location": 1,
+    "video": "media/match_videos/26-06-f.mp4"
+  }
+},
+{
+  "model": "players.player",
+  "pk": 3,
+  "fields": {
+    "category": 2,
+    "name": "Djalil",
+    "birthdate": "2024-08-11",
+    "photo": "",
+    "nationality": 1,
+    "strong_feet": "Droit",
+    "weak_feet": "Gauche",
+    "strengths": "",
+    "weaknesses": "",
+    "club": null,
+    "observations": "",
+    "positions": []
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 2,
+  "fields": {
+    "country": 1,
+    "name": "ALGERIE",
+    "established_year": 2024,
+    "flag": "flags/Screenshot_2024-08-19_at_14.41.20_cdNNSsl.png"
+  }
+},
+{
+  "model": "teams.team",
+  "pk": 3,
+  "fields": {
+    "country": 3,
+    "name": "Mali",
+    "established_year": 2024,
+    "flag": "flags/mali.png"
+  }
+},
+{
+  "model": "postes.position",
+  "pk": 1,
+  "fields": {
+    "name": "Ailier Gauche"
+  }
+},
+{
+  "model": "postes.position",
+  "pk": 2,
+  "fields": {
+    "name": "Ailier Droit"
+  }
+},
+{
+  "model": "analyses.analyse",
+  "pk": 1,
+  "fields": {
+    "description": "Phase defensive",
+    "team": 2,
+    "match": 1,
+    "video": "analyses/Screen_Recording_2024-01-27_at_10.19.37.mp4"
+  }
+},
+{
+  "model": "analyses.analyse",
+  "pk": 2,
+  "fields": {
+    "description": "Analyse équipe locale",
+    "team": 2,
+    "match": 1,
+    "video": "analyses/Invitation_card_2.mp4"
+  }
+}
+]
