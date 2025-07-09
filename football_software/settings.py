@@ -125,17 +125,23 @@ USE_TZ = True
 
 # Static files
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
-
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 
 # WhiteNoise en prod
 if not DEBUG:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Media files
+import os
+
+# URL pour accéder aux fichiers media
 MEDIA_URL = "/media/"
+
+# Répertoire physique où Django sauvegarde les fichiers uploadés
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
 
 # Default primary key field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
